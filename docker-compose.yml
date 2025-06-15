@@ -1,3 +1,4 @@
+version: '3.8'
 
 services:
   frontend:
@@ -7,6 +8,7 @@ services:
     volumes:
       - ./frontend:/app
       - /app/node_modules
+    command: ["npm", "start"]
     depends_on:
       - backend
 
@@ -17,15 +19,25 @@ services:
     volumes:
       - ./backend:/app
       - /app/node_modules
+    command: ["npm", "run", "dev"]
     depends_on:
       - mongo
+      - redis
 
   mongo:
     image: mongo
     ports:
       - "27017:27017"
     volumes:
-      - mongo_data:/data/db
+      - mongo-data:/data/db
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
 
 volumes:
-  mongo_data:
+  mongo-data:
+  redis-data:
