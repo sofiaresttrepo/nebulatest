@@ -1,38 +1,187 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: #282c34;
+  color: white;
+  min-height: 100vh;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.App-link {
+.App-header h1 {
+  margin-bottom: 10px;
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-header p {
+  margin-bottom: 30px;
+  color: #888;
+}
+
+/* Secciones */
+.status-section, .section {
+  background-color: #3a3f47;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #4a5568;
+}
+
+.section h2 {
+  color: #61dafb;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+/* Formularios */
+.form {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form input {
+  padding: 10px;
+  border: 1px solid #4a5568;
+  border-radius: 5px;
+  background-color: #2d3748;
+  color: white;
+  min-width: 150px;
+}
+
+.form input::placeholder {
+  color: #a0aec0;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #61dafb;
+}
+
+/* Botones */
+button {
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #4fa8c5;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #4a5568;
+  color: #888;
+  cursor: not-allowed;
+  transform: none;
+}
+
+button.danger {
+  background-color: #e53e3e;
+  color: white;
+}
+
+button.danger:hover:not(:disabled) {
+  background-color: #c53030;
+}
+
+/* Acciones */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Estados */
+.status {
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.status.success {
+  background-color: #22543d;
+  border: 1px solid #38a169;
+}
+
+.status.error {
+  background-color: #742a2a;
+  border: 1px solid #e53e3e;
+}
+
+.status p {
+  margin: 5px 0;
+}
+
+.status small {
+  color: #a0aec0;
+}
+
+/* Display de datos */
+.data-display {
+  background-color: #2d3748;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  text-align: left;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.data-item {
+  background-color: #4a5568;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border-left: 4px solid #61dafb;
+}
+
+.data-item strong {
+  color: #61dafb;
+}
+
+.data-item small {
+  color: #a0aec0;
+  font-size: 0.8em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .form {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form input {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .actions button {
+    width: 100%;
+    max-width: 200px;
   }
 }

@@ -4,37 +4,37 @@
 
 ### 🖥️ Entorno de Desarrollo
 
-- [ ] Crear estructura de proyecto en **VS Code** con tres carpetas:
-  - [ ] `/frontend` (React con CRA)
-  - [ ] `/backend` (Node.js + Express)
-  - [ ] `/mongo` (configurada vía Docker)
+- [✅ ] Crear estructura de proyecto en **VS Code** con tres carpetas:
+  - [ ✅] `/frontend` (React con CRA)
+  - [ ✅] `/backend` (Node.js + Express)
+  - [ ✅] `/mongo` (configurada vía Docker)
 
-- [ ] Crear archivo `docker-compose.yml` en la raíz del proyecto
+- [✅ ] Crear archivo `docker-compose.yml` en la raíz del proyecto
 
-- [ ] Incluir y configurar servicios:
-  - [ ] **Frontend** (React)
-  - [ ] **Backend** (Node.js)
-  - [ ] **MongoDB**
+- [ ✅] Incluir y configurar servicios:
+  - [✅ ] **Frontend** (React)
+  - [✅ ] **Backend** (Node.js)
+  - [✅ ] **MongoDB**
 
-- [ ] Verificar que los servicios se ejecutan correctamente con:
+- [✅ ] Verificar que los servicios se ejecutan correctamente con:
   ```bash
   docker-compose up --build
   ```
 
-- [ ] Asegurarse que cada servicio se exponga por su puerto:
-  - [ ] React → `http://localhost:3000`
-  - [ ] Backend → `http://localhost:5000`
-  - [ ] MongoDB → `27017` interno (no expuesto si no es necesario)
+- [ ✅] Asegurarse que cada servicio se exponga por su puerto:
+  - [ ✅] React → `http://localhost:3000`
+  - [✅ ] Backend → `http://localhost:5000`
+  - [ ✅] MongoDB → `27017` interno (no expuesto si no es necesario)
 
 ### ⚙️ Docker Compose
 
-- [ ] Uso de volúmenes para desarrollo (`/app`, `node_modules`)
-- [ ] Uso de `depends_on` para la relación entre servicios
-- [ ] Verificar que todos los contenedores se comunican entre sí por nombre de servicio
+- [ ✅] Uso de volúmenes para desarrollo (`/app`, `node_modules`)
+- [✅ ] Uso de `depends_on` para la relación entre servicios
+- [ ✅] Verificar que todos los contenedores se comunican entre sí por nombre de servicio
 
 ### 📦 Construcción y Despliegue
 
-- [ ] El entorno puede levantarse y apagarse con:
+- [✅ ] El entorno puede levantarse y apagarse con:
   ```bash
   docker-compose up / down
   ```
@@ -64,11 +64,11 @@
 ### ➕ Agregar Nueva Base de Datos
 
 - [ ] Agregar un servicio adicional en `docker-compose.yml`, por ejemplo:
-  - [ ] Redis
+  - [✅ ] Redis
   - [ ] MariaDB
   - [ ] CouchDB
 
-- [ ] Instalar la librería correspondiente en el backend (ej. `ioredis`, `mysql2`, etc.)
+- [ ✅] Instalar la librería correspondiente en el backend (ej. `ioredis`, `mysql2`, etc.)
 
 - [ ] Crear una funcionalidad en Node.js que:
   - [ ] Guarde un dato en la nueva base de datos
@@ -84,7 +84,7 @@
 | Uso de CLI de Docker para logs e inspección | [ ] |
 | Integración de una nueva base de datos y funcionalidad asociada | [ ] |
 
-## ✨ BONUS (Opcional pero recomendado)
+## ✨ BONUS 
 
 - [ ] Usar `.env` para variables de entorno (ej. conexión Mongo, puertos, etc.)
 - [ ] Separar código en controladores / rutas para buena estructura
