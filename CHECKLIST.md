@@ -4,7 +4,7 @@
 
 ### 🖥️ Entorno de Desarrollo
 
-- [✅ ] Crear estructura de proyecto en **VS Code** con tres carpetas:
+- [ ✅] Crear estructura de proyecto en **VS Code** con tres carpetas:
   - [ ✅] `/frontend` (React con CRA)
   - [ ✅] `/backend` (Node.js + Express)
   - [ ✅] `/mongo` (configurada vía Docker)
@@ -39,14 +39,14 @@
   docker-compose up / down
   ```
 
-- [ ] El frontend consume correctamente una API del backend
-- [ ] El backend puede leer/escribir datos en MongoDB
+- [✅ ] El frontend consume correctamente una API del backend
+- [✅ ] El backend puede leer/escribir datos en MongoDB
 
 ## 🧪 FASE 2: Evaluación en Vivo
 
 ### 🔄 Modificaciones en Tiempo Real
 
-- [ ] Editar código en React (ej. cambiar un texto) y ver reflejado sin salir del entorno
+- [ ] Editar código en React (ej. cambiar un texto) y ver reflejado.
 - [ ] Editar una ruta en Node.js y comprobar que el cambio se refleja al recargar
 
 ### 📋 Logs y Depuración
@@ -84,8 +84,3 @@
 | Uso de CLI de Docker para logs e inspección | [ ] |
 | Integración de una nueva base de datos y funcionalidad asociada | [ ] |
 
-## ✨ BONUS 
-
-- [ ] Usar `.env` para variables de entorno (ej. conexión Mongo, puertos, etc.)
-- [ ] Separar código en controladores / rutas para buena estructura
-- [ ] Añadir readme con pasos para correr el proyecto

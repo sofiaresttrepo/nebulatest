@@ -1,61 +1,92 @@
-# 🚀 APIs Disponibles - NEBULA Technical Test
 
-## 🔧 **Backend Base**
-- `GET /` - Status del servidor
-- `GET /ping` - Health check
+# 🚀 Nebula Test - Fullstack + Redis (Dockerized)
 
-## 🍃 **MongoDB APIs**
-- `GET /api/data` - Obtener todos los documentos
-- `POST /api/data` - Crear nuevo documento
-  ```json
-  { "name": "Sofia", "message": "Test message" }
-  ```
-- `DELETE /api/data` - Limpiar toda la colección
+Prueba técnica para evaluación Fullstack con Docker Compose.
 
-## 🔴 **Redis APIs**
-- `GET /api/redis` - Test básico de conexión
-- `POST /api/redis` - Guardar datos en Redis
-  ```json
-  { "key": "mykey", "value": "myvalue" }
-  ```
-- `GET /api/redis/:key` - Obtener valor por clave específica
+---
 
-## 🌐 **URLs para testing**
+## 📦 Tecnologías utilizadas
 
-### **Frontend:**
-- http://localhost:3000
+- ⚛️ Frontend: React (CRA)
+- 🟩 Backend: Node.js (Express)
+- 🐳 Base de datos NoSQL: Redis
+- 📦 Docker + Docker Compose
 
-### **Backend directo:**
-- http://localhost:5000/ping
-- http://localhost:5000/api/data
-- http://localhost:5000/api/redis
+---
 
-### **Bases de datos (solo para herramientas):**
-- MongoDB: localhost:27017
-- Redis: localhost:6379 (usar redis-cli, no navegador)
+## 🛠️ Requisitos previos
 
-## 🎯 **Ejemplos de uso con curl**
+- Node.js + npm (solo para desarrollo local)
+- Docker y Docker Compose instalados
+- Git
+
+---
+
+## 🚀 Cómo iniciar el proyecto
+
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/nebula-test.git
+   cd nebula-test
+````
+
+2. Levantar el entorno:
+
+   ```bash
+   docker-compose up --build
+   ```
+
+3. Acceder a:
+
+   * Frontend: `http://localhost:3000`
+   * API Backend: `http://localhost:5000`
+   * Prueba Redis: `http://localhost:5000/api/redis`
+
+---
+
+## 📂 Estructura del Proyecto
+
+```
+nebula-test/
+├── backend/          # API Express con conexión a Redis
+├── frontend/         # React App
+├── docker-compose.yml
+└── README.md
+```
+
+---
+
+## 🧪 Test rápido de Redis
+
+Puedes usar Postman o navegador para hacer `GET` a:
+
+```
+http://localhost:5000/api/redis
+```
+
+Este endpoint guarda un valor de prueba en Redis y lo confirma en la respuesta.
+
+---
+
+## ❌ Cómo detener los servicios
 
 ```bash
-# Health check
-curl http://localhost:5000/ping
-
-# MongoDB - Crear datos
-curl -X POST http://localhost:5000/api/data \
-  -H "Content-Type: application/json" \
-  -d '{"name": "Sofia", "message": "Hola desde API"}'
-
-# MongoDB - Leer datos
-curl http://localhost:5000/api/data
-
-# Redis - Test básico
-curl http://localhost:5000/api/redis
-
-# Redis - Guardar datos
-curl -X POST http://localhost:5000/api/redis \
-  -H "Content-Type: application/json" \
-  -d '{"key": "prueba", "value": "funciona!"}'
-
-# Redis - Leer clave específica
-curl http://localhost:5000/api/redis/prueba
+docker-compose down
 ```
+
+---
+
+## 📌 Notas adicionales
+
+* Usa `docker-compose logs -f backend` para inspeccionar logs del backend.
+
+---
+
+## 📫 Autor
+
+Realizado por Sofía Restrepo para Nebula Engineering S.A.S.
+
+```
+
+---
+
